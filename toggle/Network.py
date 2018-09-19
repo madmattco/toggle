@@ -177,7 +177,7 @@ class NetworkManager(Network):
         for ap in self.wifi.SpecificDevice().GetAccessPoints():
             i = {
                 "name": ap.Ssid,
-                "active": False if aap == None else ap.HwAddress == aap.HwAddress,
+                "active": False if aap == None else True,
                 "service": ap,
                 "strength": ap.Strength
             }
